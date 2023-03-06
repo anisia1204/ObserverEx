@@ -11,10 +11,13 @@ public class TemperatureSensor implements Subject{
     private String lastTechnicalRevision;
     private double meteorologicalPrecision;
 
-    public TemperatureSensor(int tempState, int sensorId) {
+    public TemperatureSensor(int tempState, int sensorId, String location, String lastTechnicalRevision, double meteorologicalPrecision) {
         this.tempState = tempState;
         observers = new ArrayList<Observer>();
         this.sensorId = sensorId;
+        this.location = location;
+        this.lastTechnicalRevision = lastTechnicalRevision;
+        this.meteorologicalPrecision = meteorologicalPrecision;
     }
 
     @Override
